@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BRAINARD THE HERALD</title>
+  <link rel="stylesheet" href="bth.css">
+</head>
+<body>
+  <header>
+     <img src="images/logo.jpeg" alt="Brainard Logo" class="logo" />
+    <h1>BRAINARD THE HERALD</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses">Course</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="hero">
+  
+     <h1>
+      Empowering Your <br> English Learning <br> Journey
+     </h1>
+    <p>
+      Unlock your potential and take your <br>English skills to the next level. <br> Discover a world of opportunities <br> with every word, phrase, and <br> conversation.
+    </p>
+    </div>
+    <div class="left-img">
+ <img src="images/book.png" alt="" width="650"  height="600px">
+    </div>
+  </div>
+ <section id="about">
+<h2>
+    About <br>  BRAINARD THE <br>HERALD
+   </h2>
+ 
+<p>
+    BRAINARD THE HERALD <br> is a premier English learning platform dedicated to helping individuals <br> of all ages and backgrounds master the English language. <br>  To empower students with effective communication skills <br>through creation of immersive programmes to promote competent <br> use of English in academic and social settings.  <br>And to build necessary confidence which will enhance global competitiveness.
+</p>
+  </div>
+  <video autoplay muted playsinline loop controls poster="thumbnail.jpg">
+      <source src="media/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+ <section class="cta">
+  <p>
+ Join us for daily English tips, practice exercises, <br> and a supportive community to help you achieve fluency!
+  </p>
+    <a href="https://whatsapp.com/channel/0029VbBGXuEGzzKOkGBVOG1K " target="_blank">
+      Join Our WhatsApp Channel
+    </a>
+  </section>
+   <section id="courses">
+    <h3>Course:</h3>
+  </section>
+
+  
+  <section>
+    <h1>Mastering British & American English</h1>
+    <p>Understand the differences. Speak both fluently.</p>
+  </section>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showContent('british')">🇬🇧 British English</div>
+    <div class="tab" onclick="showContent('american')">🇺🇸 American English</div>
+  </div>
+
+  <div class="content" id="british">
+    <div class="card">
+      <h3>Spelling</h3>
+      <p>Colour, Centre, Organise</p>
+    </div>
+    <div class="card">
+      <h3>Vocabulary</h3>
+      <p>Lift = Elevator, Lorry = Truck, Flat = Apartment</p>
+    </div>
+    <div class="card">
+      <h3>Pronunciation</h3>
+      <p>
+        Type a word to hear it pronounced:
+        <input type="text" id="britishWord" placeholder="e.g. schedule" />
+        <button onclick="speakCustom('britishWord', 'en-GB')">Speak 🇬🇧 British</button>
+      </p>
+    </div>
+  </div>
+
+  <div class="content" id="american" style="display: none;">
+    <div class="card">
+      <h3>Spelling</h3>
+      <p>Color, Center, Organize</p>
+    </div>
+    <div class="card">
+      <h3>Vocabulary</h3>
+      <p>Elevator = Lift, Truck = Lorry, Apartment = Flat</p>
+    </div>
+    <div class="card">
+      <h3>Pronunciation</h3>
+      <p>
+        Type a word to hear it pronounced:
+        <input type="text" id="americanWord" placeholder="e.g. schedule" />
+        <button onclick="speakCustom('americanWord', 'en-US')">Speak 🇺🇸 American</button>
+      </p>
+    </div>
+  </div>
+
+  <div class="practice">
+    <h2>Practice Section</h2>
+    <div class="quiz">
+      <p>Which is British spelling?</p>
+      <input type="text" id="answerInput" placeholder="e.g. Colour or Color?" />
+      <button onclick="checkAnswer()">Check Answer</button>
+      <div class="result" id="resultText"></div>
+    </div>
+    
+
+  <section id="transcription">
+  <h3>Word Transcription</h3>
+  <p>Enter an English word to get its transcription and pronunciation:</p>
+  <input type="text" id="transcriptionInput" placeholder="e.g. schedule" />
+  <br />
+  <button onclick="getTranscription()">Show Transcription</button>
+  <button onclick="speakTranscribedWord('en-GB')">🔊 Speak 🇬🇧</button>
+  <button onclick="speakTranscribedWord('en-US')">🔊 Speak 🇺🇸</button>
+  <div class="transcription-result" id="transcriptionResult"></div>
+</section>
+
+
+    <div class="voice-pronounce">
+      <h3>Pronounce Any Word</h3>
+      <input type="text" id="voiceInput" placeholder="Type a word..." />
+      <button onclick="speakWord('en-GB')">Speak 🇬🇧 British</button>
+      <button onclick="speakWord('en-US')">Speak 🇺🇸 American</button>
+    </div>
+  </div>
+
+  <div class="tracker">
+    <h2>Your Progress</h2>
+    <p>Correct answers: <span id="correctCount">0</span></p>
+    <p>Total attempts: <span id="totalCount">0</span></p>
+  </div>
+
+
+
+
+
+
+
+
+
+  <section id="contact">
+    <h3>Contact Us:</h3>
+    <p>
+     <strong>
+Email:
+     </strong>   brainarddherald@gmail.com
+  </p>
+  <p>
+    <strong>
+Phone:
+    </strong>
+ +234 8142334352
+  </p>
+
+  
+     <form action="mailto:brainarddherald@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message
+        <a href="mailto:  brainarddherald@gmail.com"></a>
+      </button>
+    </form>
+  </section>
+  <footer>
+   
+   
+    <div class="social-icons">
+      <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a>
+     <h3>
+      Mission
+     </h3>
+
+   
+    <p>
+       To empower students with strong English communication skills <br>by creating immersive programmes that promote the exclusive use of <br> English in academic and social settings. <br>We aim to foster confidence and fluency in global competency.
+    </p>
+ <p>&copy; 2025 Brainard The Herald. All rights reserved.</p>
+    
+ <script src="bth.js"> </script>
+</body>
+</html>
